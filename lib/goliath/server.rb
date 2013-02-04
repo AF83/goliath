@@ -109,6 +109,7 @@ module Goliath
     def stop
       logger.info('Stopping server...')
       EM.stop
+      exit
     end
 
     # Loads a configuration file
