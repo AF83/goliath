@@ -110,7 +110,7 @@ describe Goliath::Server do
         logger.should_receive(:info).with('Stopping server...')
         @s.logger = logger
         @s.start
-        @s.stop
+        expect { @s.stop }.to raise_error(SystemExit)
       end
     end
   end
