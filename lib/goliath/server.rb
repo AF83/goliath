@@ -108,7 +108,7 @@ module Goliath
     # Stops the server running.
     def stop
       logger.info('Stopping server...')
-      EM.stop
+      EM.stop if EM.reactor_running?
       exit
     end
 
